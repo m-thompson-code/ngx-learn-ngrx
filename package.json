@@ -1,14 +1,15 @@
 {
   "name": "my-workspace",
-  "version": "0.0.0",
+  "version": "0.0.3",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build ngx-learn-ngrx",
     "watch": "ng build ngx-learn-ngrx --watch",
     "test": "ng test ngx-learn-ngrx",
-    "lint": "ng lint ngx-learn-ngrx",
-    "publish": "npm run build && cd dist/ngx-learn-ngrx && npm publish"
+    "lint": "ng lint ngx-learn-ngrx --fix",
+    "pre-publish": "npm run test -- --watch=false && npm run lint && npm run build",
+    "publish": "npm run pre-publish && cd dist/ngx-learn-ngrx && npm publish"
   },
   "private": true,
   "dependencies": {
@@ -22,13 +23,24 @@
     "@angular/router": "^14.2.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
+    "uuid": "^9.0.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.2.10",
+    "@angular-eslint/builder": "14.4.0",
+    "@angular-eslint/eslint-plugin": "14.4.0",
+    "@angular-eslint/eslint-plugin-template": "14.4.0",
+    "@angular-eslint/schematics": "14.4.0",
+    "@angular-eslint/template-parser": "14.4.0",
     "@angular/cli": "~14.2.10",
     "@angular/compiler-cli": "^14.2.0",
+    "@bitovi/eslint-config": "^1.4.1",
     "@types/jasmine": "~4.0.0",
+    "@types/uuid": "^9.0.0",
+    "@typescript-eslint/eslint-plugin": "5.43.0",
+    "@typescript-eslint/parser": "5.43.0",
+    "eslint": "^8.28.0",
     "jasmine-core": "~4.3.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",

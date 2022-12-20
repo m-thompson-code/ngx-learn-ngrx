@@ -2,6 +2,6 @@
  * Public API Surface of ngx-learn-ngrx
  */
 
-export * from './lib/ngx-learn-ngrx.service';
-export * from './lib/ngx-learn-ngrx.component';
-export * from './lib/ngx-learn-ngrx.module';
+export * from './lib/services/login.service';
+export * from './lib/types/credentials.model';
+export * from './lib/types/login-response.model';

@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { NgxLearnNgrxService } from './ngx-learn-ngrx.service';
+import { LoginService } from './login.service';
 
-describe('NgxLearnNgrxService', () => {
-  let service: NgxLearnNgrxService;
+describe('LoginService', () => {
+  let service: LoginService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(NgxLearnNgrxService);
+    service = TestBed.inject(LoginService);
   });
 
   it('should be created', () => {
